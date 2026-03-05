@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import './App.css'
+import './styles/App.css'
 import CvForm from './components/CvForm/CvForm.jsx'
+import CvDisplay from './components/CvDisplay.jsx';
 
 function App() {
   const exampleCv = () => ({
@@ -56,6 +57,7 @@ function App() {
         id: crypto.randomUUID(),
         startDate: "09/2013",
         endDate: "05/2017",
+        location: "Austin, TX, USA",
         institution: "University of Texas at Austin",
         degree: "Bachelor of Science in Computer Science"
       }
@@ -83,10 +85,8 @@ function App() {
 
   return (
     <>
-      <CvForm
-        cvData={cvData}
-        updatePersonal={updatePersonal}
-      />
+      <CvForm cvData={cvData} updatePersonal={updatePersonal} />
+      <CvDisplay cvData={cvData} />
     </>
   )
 }

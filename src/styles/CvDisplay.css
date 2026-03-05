@@ -1,0 +1,125 @@
+.cv-display {
+  width: 21cm;
+  height: 29.7cm;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #1E3A5F;
+  color: white;
+  align-items: center;
+  padding: 36px 24px;
+}
+
+.header>h1 {
+  font-size: 46px;
+  margin: 0 0 22px;
+}
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.contact>p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.summary {
+  max-width: 700px;
+  margin-top: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cv-body {
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+
+.body-section {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0px 0px;
+  padding: 0px 56px;
+  gap: 18px;
+}
+
+.body-section>h2 {
+  text-align: center;
+  background-color: #0E374E12;
+  color: #1E3A5F;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-areas:
+    "dates institution"
+    "location degree";
+}
+
+.education-date {
+  grid-area: dates;
+}
+
+.education-location {
+  grid-area: location;
+}
+
+.education-institution {
+  grid-area: institution;
+  font-weight: bold;
+}
+
+.education-degree {
+  grid-area: degree;
+}
+
+.experiences-container {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-areas:
+    "dates company"
+    "location role"
+    ". description";
+}
+
+.experiences-date {
+  grid-area: dates;
+}
+
+.experiences-location {
+  grid-area: location;
+}
+
+.experiences-company {
+  grid-area: company;
+  font-weight: bold;
+}
+
+.experiences-role {
+  grid-area: role;
+}
+
+.experiences-description {
+  grid-area: description;
+}
