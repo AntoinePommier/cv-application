@@ -1,9 +1,13 @@
-form {
+.all-forms-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
   min-width: 300px;
   padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   background-color: white;
   color: black;
   border: none;
@@ -11,15 +15,48 @@ form {
   text-align: start;
 }
 
-form>h1 {
+.form-container>button {
+  display: flex;
+  padding: 0;
+  margin: 0;
   font-size: 24px;
+  background: white;
+  text-align: start;
+  outline: none;
+  border: none;
+}
+
+.button-title {
+  flex: 1;
+}
+
+.chevron {
+  transition: transform 200ms ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease, margin-top 300ms ease;
+}
+
+.form-wrapper.open {
+  grid-template-rows: 1fr;
+  margin-top: 16px;
+}
+
+.form-wrapper>form {
+  overflow: hidden;
 }
 
 .input-div {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-
   gap: 3px;
 }
 
