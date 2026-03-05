@@ -1,8 +1,6 @@
 import { FaChevronDown } from 'react-icons/fa6';
 
 function PersonalInfoForm({ cvData, updatePersonal, open, onToggle }) {
-  console.log(cvData)
-
   return (
     <div className="form-container">
       <button onClick={onToggle}>

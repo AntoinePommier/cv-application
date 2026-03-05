@@ -83,10 +83,23 @@ function App() {
     }));
   }
 
+  function updateSummary(value) {
+    setCvData(prev => ({
+      ...prev, summary: value
+    }));
+  }
+
   return (
     <>
-      <CvForm cvData={cvData} updatePersonal={updatePersonal} />
-      <CvDisplay cvData={cvData} />
+      <CvForm
+        cvData={cvData}
+        updatePersonal={updatePersonal}
+        updateSummary={updateSummary}
+      />
+
+      <CvDisplay
+        cvData={cvData}
+      />
     </>
   )
 }
