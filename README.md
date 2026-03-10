@@ -10,6 +10,12 @@ The goal of the assignment is to practice **state management, component architec
 
 ---
 
+## Live Preview 
+
+https://antoinepommier-cv-application.netlify.app/
+
+---
+
 ## Features
 
 - Live CV preview that updates while editing the form
