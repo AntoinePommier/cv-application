@@ -123,6 +123,33 @@ function App() {
     }));
   }
 
+  function updateExperience(id, field, value) {
+    setCvData(prev => ({
+      ...prev, experiences: prev.experiences.map((item) =>
+        item.id === id ? { ...item, [field]: value } : item)
+    }));
+  }
+
+  function deleteExperience(id) {
+    setCvData(prev => ({
+      ...prev, experiences: prev.experiences.filter((item) => item.id !== id)
+    }));
+  }
+
+  function addExperience(id) {
+    setCvData(prev => ({
+      ...prev, experiences: [...prev.experiences, {
+        id,
+        startDate: "",
+        endDate: "",
+        location: "",
+        company: "",
+        role: "",
+        description: ""
+      }]
+    }));
+  }
+
   return (
     <>
       <CvForm
@@ -132,6 +159,9 @@ function App() {
         updateEducation={updateEducation}
         deleteEducation={deleteEducation}
         addEducation={addEducation}
+        updateExperience={updateExperience}
+        deleteExperience={deleteExperience}
+        addExperience={addExperience}
       />
 
       <CvDisplay

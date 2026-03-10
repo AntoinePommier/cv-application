@@ -69,7 +69,8 @@ button {
   gap: 26px;
 }
 
-.education-item-container {
+.education-item-container,
+.experience-item-container {
   width: 100%;
 }
 
@@ -100,7 +101,8 @@ button {
   transition: opacity 0.2s;
 }
 
-.education-item-container:hover .delete-button {
+.education-item-container:hover .delete-button,
+.experience-item-container:hover .delete-button {
   opacity: 1;
 }
 
@@ -149,6 +151,10 @@ textarea {
   resize: none;
   outline: none;
   white-space: pre-line;
+}
+
+.role-description-textarea {
+  height: 150px;
 }
 
 .char-count {

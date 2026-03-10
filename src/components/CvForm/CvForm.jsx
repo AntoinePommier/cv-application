@@ -2,9 +2,10 @@ import { useState } from "react"
 import PersonalInfoForm from "./PersonalInfoForm.jsx"
 import SummaryForm from "./SummaryForm.jsx";
 import EducationForm from "./EducationForm.jsx";
+import ExperienceForm from "./ExperienceForm.jsx"
 import '../../styles/CvForm.css'
 
-function CvForm({ cvData, updatePersonal, updateSummary, updateEducation, deleteEducation, addEducation }) {
+function CvForm({ cvData, updatePersonal, updateSummary, updateEducation, deleteEducation, addEducation, updateExperience, deleteExperience, addExperience }) {
   const [openSection, setOpenSection] = useState("personal");
 
   const toggleSection = (key) => {
@@ -31,6 +32,14 @@ function CvForm({ cvData, updatePersonal, updateSummary, updateEducation, delete
         addEducation={addEducation}
         open={openSection === "education"}
         onToggle={() => toggleSection("education")}
+      />
+      <ExperienceForm
+        experienceData={cvData.experiences}
+        updateExperience={updateExperience}
+        deleteExperience={deleteExperience}
+        addExperience={addExperience}
+        open={openSection === "experience"}
+        onToggle={() => toggleSection("experience")}
       />
     </div>
   )
