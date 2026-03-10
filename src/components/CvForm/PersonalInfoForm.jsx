@@ -19,7 +19,7 @@ function PersonalInfoForm({ cvData, updatePersonal, open, onToggle }) {
           </div>
           <div className="input-div">
             <label htmlFor="phone">Phone</label>
-            <input type="tel" id="phone" placeholder="Phone" value={cvData.personal.phone} onChange={(e) => updatePersonal("phone", e.target.value)} />
+            <input type="text" id="phone" placeholder="Phone" value={cvData.personal.phone} onChange={(e) => updatePersonal("phone", e.target.value)} />
           </div>
           <div className="input-div">
             <label htmlFor="location">Location</label>
