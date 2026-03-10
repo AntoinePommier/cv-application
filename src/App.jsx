@@ -69,17 +69,6 @@ function App() {
         institution: "University of Sophia",
         degree: "Bachelor of Science in Computer Science"
       }
-    ],
-
-    skills: [
-      { id: crypto.randomUUID(), name: "React" },
-      { id: crypto.randomUUID(), name: "TypeScript" },
-      { id: crypto.randomUUID(), name: "JavaScript (ES6+)" },
-      { id: crypto.randomUUID(), name: "Node.js" },
-      { id: crypto.randomUUID(), name: "HTML5 & CSS3" },
-      { id: crypto.randomUUID(), name: "Accessibility (WCAG)" },
-      { id: crypto.randomUUID(), name: "Jest & React Testing Library" },
-      { id: crypto.randomUUID(), name: "Git & GitHub" }
     ]
   });
 
