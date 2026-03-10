@@ -1,10 +1,10 @@
-import { FaChevronDown } from 'react-icons/fa6';
+import { FaChevronDown, FaUser } from 'react-icons/fa6';
 
 function PersonalInfoForm({ cvData, updatePersonal, open, onToggle }) {
   return (
     <div className="form-container">
       <button onClick={onToggle}>
-        <span className="button-title">Personal Details</span>
+        <span className="button-title"><FaUser />Personal Details</span>
         <span className={`chevron ${open ? "open" : ""}`}><FaChevronDown size={15} /></span>
       </button>
       <div className={`form-wrapper ${open ? "open" : ""}`}>
@@ -15,7 +15,7 @@ function PersonalInfoForm({ cvData, updatePersonal, open, onToggle }) {
           </div>
           <div className="input-div">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Email" value={cvData.personal.email} onChange={(e) => updatePersonal("email", e.target.value)} />
+            <input type="text" id="email" placeholder="Email" value={cvData.personal.email} onChange={(e) => updatePersonal("email", e.target.value)} />
           </div>
           <div className="input-div">
             <label htmlFor="phone">Phone</label>

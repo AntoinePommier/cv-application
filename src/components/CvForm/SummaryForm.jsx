@@ -1,10 +1,10 @@
-import { FaChevronDown } from 'react-icons/fa6';
+import { FaChevronDown, FaFileLines } from 'react-icons/fa6';
 
 function SummaryForm({ cvData, updateSummary, open, onToggle }) {
   return (
     <div className="form-container">
       <button onClick={onToggle}>
-        <span className="button-title">Summary</span>
+        <span className="button-title"><FaFileLines />Summary</span>
         <span className={`chevron ${open ? "open" : ""}`}><FaChevronDown size={15} /></span>
       </button>
       <div className={`form-wrapper ${open ? "open" : ""}`}>

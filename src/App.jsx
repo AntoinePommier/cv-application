@@ -60,6 +60,14 @@ function App() {
         location: "Austin, TX, USA",
         institution: "University of Texas at Austin",
         degree: "Bachelor of Science in Computer Science"
+      },
+      {
+        id: crypto.randomUUID(),
+        startDate: "09/2013",
+        endDate: "05/2017",
+        location: "Austin, TX, USA",
+        institution: "University of Sophia",
+        degree: "Bachelor of Science in Computer Science"
       }
     ],
 
@@ -89,12 +97,41 @@ function App() {
     }));
   }
 
+  function updateEducation(id, field, value) {
+    setCvData(prev => ({
+      ...prev, education: prev.education.map((item) =>
+        item.id === id ? { ...item, [field]: value } : item)
+    }));
+  }
+
+  function deleteEducation(id) {
+    setCvData(prev => ({
+      ...prev, education: prev.education.filter((item) => item.id !== id)
+    }));
+  }
+
+  function addEducation(id) {
+    setCvData(prev => ({
+      ...prev, education: [...prev.education, {
+        id,
+        startDate: "",
+        endDate: "",
+        location: "",
+        institution: "New School",
+        degree: ""
+      }]
+    }));
+  }
+
   return (
     <>
       <CvForm
         cvData={cvData}
         updatePersonal={updatePersonal}
         updateSummary={updateSummary}
+        updateEducation={updateEducation}
+        deleteEducation={deleteEducation}
+        addEducation={addEducation}
       />
 
       <CvDisplay

@@ -15,7 +15,7 @@
   text-align: start;
 }
 
-.form-container>button {
+button {
   display: flex;
   padding: 18px;
   font-size: 24px;
@@ -26,6 +26,9 @@
 }
 
 .button-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   flex: 1;
 }
 
@@ -50,11 +53,55 @@
   padding-bottom: 26px;
 }
 
-.form-wrapper>form {
+.form-wrapper>* {
   overflow: hidden;
+}
+
+.form-wrapper>form {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.education-item-container {
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 18px;
+  gap: 32px;
+}
+
+.buttons-container>button {
+  padding: 0;
+}
+
+.main-button {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.education-item-container:hover .delete-button {
+  opacity: 1;
 }
 
 .input-div {
@@ -70,6 +117,28 @@ input {
   color: black;
   border: none;
   border-radius: 12px;
+}
+
+.date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.date-container>div {
+  flex: 1;
+}
+
+.add-button {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 3px solid #cdcece;
+  border-radius: 20px;
 }
 
 textarea {
